@@ -1,4 +1,4 @@
-class DepartmentsController < ApplicationController
+class Api::V1::DepartmentsController < ApplicationController
   before_action :set_department, only: [:show, :update, :destroy]
 
   # GET /departments
@@ -10,7 +10,7 @@ class DepartmentsController < ApplicationController
 
   # GET /departments/1
   def show
-    render json: @department
+    render json: @department.products
   end
 
   # POST /departments

@@ -1,10 +1,14 @@
-class ProductsController < ApplicationController
+class Api::V1::ProductsController < ApplicationController
   before_action :set_product, only: [:show, :update, :destroy]
 
   # GET /products
   def index
-    @products = Product.search(params[:search])
-
+    if params[:code]
+      @products = Product.joins(:promotions).where(promotions: {code: params[:code]})
+    else
+      @products = Product.search(params[:search])
+    end
+    
     render json: @products
   end
 
@@ -14,6 +18,11 @@ class ProductsController < ApplicationController
     render json: @products
   end
 
+  def promocode
+    @products = Product.joins(:promotions).where(promotions: {code: params[:code]})
+
+    render json: @products
+  end
   # GET /products/1
   def show
     render json: @product

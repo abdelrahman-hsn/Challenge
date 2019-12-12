@@ -1,4 +1,4 @@
-class ProductsPromotionsController < ApplicationController
+class Api::V1::ProductsPromotionsController < ApplicationController
   before_action :set_products_promotion, only: [:show, :update, :destroy]
 
   # GET /products_promotions
