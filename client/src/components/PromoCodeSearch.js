@@ -10,7 +10,7 @@ class PromoCodeSearch extends Component {
 
     handleChange = (e) => {
         console.log(e.target.value)
-        axios.get(`api/v1/products?code=${e.target.value}`)
+        axios.get(`api/v1/promocode?code=${e.target.value}`)
         .then(response => {
             console.log(response)
             this.setState({
