@@ -21,14 +21,20 @@ class Departments extends Component {
     }
     render() {
         return (
-            <div className="lists-container">
+
+            <div className="row">
                 {this.state.lists.map( list => {
                     return (
-                        <div className="single-list" key={list.id}>
-                            <h4>{list.name}</h4>
-                            <p>{list.price}</p>
-                            <NavLink className='' to={`/departments/${list.id}`} >Link</NavLink>
+                    <div className="col-sm-6 card-products">
+                        <div className="card">
+                            <NavLink className='btn' to={`/departments/${list.id}`} >
+                                <div className="card-body">
+                                    <h5 className="card-title">{list.name}</h5>
+                                </div>
+                            </NavLink>
                         </div>
+                        
+                    </div>
                     )
                 })}
             </div>

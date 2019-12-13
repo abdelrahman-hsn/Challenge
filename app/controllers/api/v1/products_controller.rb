@@ -3,11 +3,7 @@ class Api::V1::ProductsController < ApplicationController
 
   # GET /products
   def index
-    if params[:code]
-      @products = Product.joins(:promotions).where(promotions: {code: params[:code]})
-    else
-      @products = Product.search(params[:search])
-    end
+    @products = Product.joins(:promotions).where(promotions: {code: params[:code]})
     
     render json: @products
   end

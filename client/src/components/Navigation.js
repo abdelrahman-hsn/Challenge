@@ -28,7 +28,9 @@ class Navigation extends React.Component {
 
             <NavItem path='/products' name="Products" />
             <NavItem path="/departments" name="Departments" />
-            <NavItem path="/lists" name="lists" />
+            <NavItem path="/active" name="Active Products" />
+            <NavItem path="/search" name="Search" />
+            <NavItem path="/promocode" name="Promo Code Search" />
 
           </ul>
           {/* <form className="form-inline my-2 my-lg-0">

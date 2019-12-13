@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-class Search extends Component {
+class PromoCodeSearch extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -10,7 +10,7 @@ class Search extends Component {
 
     handleChange = (e) => {
         console.log(e.target.value)
-        axios.get(`api/v1/products?search=${e.target.value}`)
+        axios.get(`api/v1/products?code=${e.target.value}`)
         .then(response => {
             console.log(response)
             this.setState({
@@ -45,4 +45,4 @@ class Search extends Component {
         )
     }
 }
-export default Search;
+export default PromoCodeSearch;

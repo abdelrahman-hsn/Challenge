@@ -9,7 +9,7 @@ class Products extends Component {
         }
     }
     componentDidMount() {
-        axios.get('api/v1/products.json')
+        axios.get('api/v1/products')
         .then(response => {
             console.log(response)
             this.setState({

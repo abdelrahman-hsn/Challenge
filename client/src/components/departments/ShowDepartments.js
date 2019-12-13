@@ -23,19 +23,19 @@ class ShowDepartments extends Component {
         })
         .catch(error => console.log(error))
     }
-
     render() {
         return (
-            
-            
-
-            <div className="lists-container">
+            <div className="row">
                 {this.state.lists.map( list => {
                     return (
-                        <div className="single-list" key={list.id}>
-                            <h4>{list.name}</h4>
-                            <p>{list.price}</p>
+                    <div className="col-sm-6 card-products">
+                        <div className="card">
+                        <div className="card-body">
+                            <h5 className="card-title">{list.name}</h5>
+                            <p className="card-text">Price : {list.price}</p>
                         </div>
+                        </div>
+                    </div>
                     )
                 })}
             </div>

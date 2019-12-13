@@ -5,21 +5,23 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # Challenge
+
+Foobar is a Python library for dealing with word pluralization.
+
+## Versions
+
+* Ruby version 2.6.5
+* Rails version 6.0.1
+* Node version 12.13.1
+* NPM version 6.13.4
+
+## Installation
+
+
+```bash
+
+
+```
