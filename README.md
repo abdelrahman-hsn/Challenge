@@ -23,6 +23,21 @@ Foobar is a Python library for dealing with word pluralization.
 
 ```bash
 
+bundle install
 
+rake db:create
+rake db:migraton
+rake db:seeds
+
+cd client
+npm install
+```
+
+## How To Run
+
+
+```bash
+
+rake start
 
 ```
