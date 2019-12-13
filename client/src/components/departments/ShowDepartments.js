@@ -1,7 +1,6 @@
-
 import React, { Component } from 'react';
 import axios from 'axios';
-class ListsContainer extends Component {
+class ShowDepartments extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -9,7 +8,7 @@ class ListsContainer extends Component {
         }
     }
     componentDidMount() {
-        axios.get('api/v1/products')
+        axios.get('api/v1/departments')
         .then(response => {
             console.log(response)
             this.setState({
@@ -20,6 +19,7 @@ class ListsContainer extends Component {
     }
     render() {
         return (
+
             <div className="lists-container">
                 {this.state.lists.map( list => {
                     return (
@@ -33,4 +33,4 @@ class ListsContainer extends Component {
         )
     }
 }
-export default ListsContainer;
+export default ShowDepartments;

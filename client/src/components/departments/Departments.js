@@ -1,7 +1,8 @@
-
 import React, { Component } from 'react';
 import axios from 'axios';
-class ListsContainer extends Component {
+import { NavLink } from "react-router-dom";
+
+class Departments extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -9,7 +10,7 @@ class ListsContainer extends Component {
         }
     }
     componentDidMount() {
-        axios.get('api/v1/products')
+        axios.get('api/v1/departments')
         .then(response => {
             console.log(response)
             this.setState({
@@ -26,6 +27,7 @@ class ListsContainer extends Component {
                         <div className="single-list" key={list.id}>
                             <h4>{list.name}</h4>
                             <p>{list.price}</p>
+                            <NavLink exact className='' to={`/departments/${list.id}`} >Link</NavLink>
                         </div>
                     )
                 })}
@@ -33,4 +35,4 @@ class ListsContainer extends Component {
         )
     }
 }
-export default ListsContainer;
+export default Departments;
