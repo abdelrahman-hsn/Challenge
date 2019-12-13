@@ -28,7 +28,6 @@ class Products extends Component {
                         <div className="card-body">
                             <h5 className="card-title">{product.name}</h5>
                             <p className="card-text">Price : {product.price}</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                         </div>
                     </div>

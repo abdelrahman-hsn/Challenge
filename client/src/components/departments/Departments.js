@@ -27,7 +27,7 @@ class Departments extends Component {
                         <div className="single-list" key={list.id}>
                             <h4>{list.name}</h4>
                             <p>{list.price}</p>
-                            <NavLink exact className='' to={`/departments/${list.id}`} >Link</NavLink>
+                            <NavLink className='' to={`/departments/${list.id}`} >Link</NavLink>
                         </div>
                     )
                 })}

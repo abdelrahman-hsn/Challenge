@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {
+    BrowserRouter as Router,
+    withRouter
+  } from "react-router-dom";
+
 class ShowDepartments extends Component {
     constructor(props){
         super(props)
@@ -8,7 +13,8 @@ class ShowDepartments extends Component {
         }
     }
     componentDidMount() {
-        axios.get('api/v1/departments')
+        const  id  = this.props.match.params.id ;
+        axios.get(`/api/v1/departments/${id}`)
         .then(response => {
             console.log(response)
             this.setState({
@@ -17,8 +23,11 @@ class ShowDepartments extends Component {
         })
         .catch(error => console.log(error))
     }
+
     render() {
         return (
+            
+            
 
             <div className="lists-container">
                 {this.state.lists.map( list => {
@@ -33,4 +42,4 @@ class ShowDepartments extends Component {
         )
     }
 }
-export default ShowDepartments;
+export default withRouter(ShowDepartments);
